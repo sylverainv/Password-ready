@@ -1,4 +1,4 @@
-//Array of special characters for password
+//Array of special characters for password creation
 var lowerCaseArray = [
   'a',
   'b',
@@ -87,7 +87,6 @@ var specialCharactersArray = [
   '~',
   '`'
 ];
-
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
