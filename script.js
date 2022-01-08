@@ -1,3 +1,4 @@
+function generatePassword(){
 //Array of special characters for password creation
 var lowerCaseArray = [
   'a',
@@ -88,7 +89,13 @@ var specialCharactersArray = [
   '`'
 ];
 
+var userSelect = [];
+var passLength = "";
+var generateBtn = "";
+
+
 // Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 
 // Prompts for password criteria
@@ -111,7 +118,7 @@ var selectedCharacters = "";
 
 if (confirmLowercase) {
 var lowerCaseArray = '';
-selectedCharacters += lowercase;
+selectedCharacters += lowerCase;
 alert("Your password will contain lowercase letters.");
 }
 else {
@@ -125,7 +132,7 @@ console.log(confirmUppercase);
 
 if (confirmUppercase === true) {
 var upperCaseArray = ''; 
-selectedCharacters += uppercase;
+selectedCharacters += upperCase;
 alert("Your password will contain uppercase letters.");
 }
 else {
@@ -153,21 +160,29 @@ console.log(confirmSpecialCharacters);
 
 if (confirmSpecialCharacters) {
 var specialCharactersArray = '';
-selectedCharacters += characters;
+selectedCharacters += specialCharacters;
 alert("Your password will contain special characters.");
 }
 else {
-var confirmSpecialCharacters = ""
+var specialCharacters = ""
 alert("Your password will not contain special characters.");
 };
  
 // selection of random varibles
-for (i = 0; i < passLength; i++) {
-  password +=
-    userSelect[Math.floor(Math.random() * userSelect.length)];
+if (userSelect.length === 0) {
+  alert("Please try again and select at least one character type!");
+  generatePassword();
+} 
+else {
+  var userSelect = [lowerCaseArray, upperCaseArray, numbersArray, specialCharactersArray];
+  console.log("user select: ", userSelect);
 }
 
+  var generatePassword = "";
+  console.log(selectedCharacters);
 
+for (i = 0; i < passLength; i++) {password += userSelect[Math.floor(Math.random() * userSelect.length)];
+}
 
 function writePassword() {
   var password = generatePassword();
@@ -179,3 +194,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+}
