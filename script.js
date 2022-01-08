@@ -1,3 +1,6 @@
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
+
 function generatePassword(){
 //Array of special characters for password creation
 var lowerCaseArray = [
@@ -94,10 +97,6 @@ var passLength = "";
 var generateBtn = "";
 
 
-// Assignment Code
-
-var generateBtn = document.querySelector("#generate");
-
 // Prompts for password criteria
 var confirmLength = (prompt("How many characters would you like your password to contain?"));
 
@@ -111,8 +110,9 @@ var confirmLength = (prompt("How many characters would you like your password to
     alert(`Your password will have ${confirmLength} characters`);
     
 // Confirm whether or not to use lowercase, uppercase, numeric and/or special characters
+
 //lower case letters
-var confirmLowercase = window.confirm("Click OK to confirm including lowercase characters."); 
+var confirmLowercase = window.confirm("Click OK to confirm to include lowercase characters."); 
 console.log(confirmLowercase);
 var selectedCharacters = "";
 
@@ -127,7 +127,7 @@ alert("Your password will not contain lowercase letters.");
 };
 
 //uppercase letters 
-var confirmUppercase = window.confirm("Click OK to confirm including uppercase characters."); 
+var confirmUppercase = window.confirm("Click OK to confirm to include uppercase characters."); 
 console.log(confirmUppercase);
 
 if (confirmUppercase === true) {
@@ -141,7 +141,7 @@ alert("Your password will not contain uppercase letters.");
 };
 
 // numeric
-var confirmNumbers = window.confirm("Click OK to confirm including numeric characters."); 
+var confirmNumbers = window.confirm("Click OK to confirm to include numeric characters."); 
 console.log(confirmNumbers);
 
 if (confirmNumbers) {
@@ -155,7 +155,7 @@ alert("Your password will not contain numbers.");
 };
 
 // special characters
-var confirmSpecialCharacters = window.confirm("Click OK to confirm including special characters."); 
+var confirmSpecialCharacters = window.confirm("Click OK to confirm to include special characters."); 
 console.log(confirmSpecialCharacters);
 
 if (confirmSpecialCharacters) {
