@@ -90,8 +90,20 @@ var specialCharactersArray = [
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+// Prompts for password criteria
+var confirmLength = (prompt("How many characters would you like your password to contain?"));
 
+// If answer is outside the parameters 
+  while(confirmLength  < 8 || confirmLength > 128) {
+    alert("Password length must be between 8-50 characters Try again");
+    var confirmLength = (prompt("How many characters would you like your password to contain?"));
+    } 
+
+// Repeat back how many charactes the user will have  
+    alert(`Your password will have ${confirmLength} characters`);
 // Write password to the #password input
+
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
