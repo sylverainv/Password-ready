@@ -101,7 +101,66 @@ var confirmLength = (prompt("How many characters would you like your password to
 
 // Repeat back how many charactes the user will have  
     alert(`Your password will have ${confirmLength} characters`);
-// Write password to the #password input
+    
+// Confirm whether or not to use lowercase, uppercase, numeric and/or special characters
+var confirmLowercase = window.confirm("Click OK to confirm including lowercase characters."); 
+console.log(confirmLowercase);
+
+var selectedCharacters = "";
+
+
+if (confirmLowercase) {
+var lowerCaseArray = '';
+selectedCharacters += lowercase;
+alert("Your password will contain lowercase letters.");
+}
+else {
+var lowerCaseArray = ""
+alert("Your password will not contain lowercase letters.");
+};
+
+//uppercase letters 
+var confirmUppercase = window.confirm("Click OK to confirm including uppercase characters."); 
+console.log(confirmUppercase);
+
+if (confirmUppercase === true) {
+var upperCaseArray = ''; 
+selectedCharacters += uppercase;
+alert("Your password will contain uppercase letters.");
+}
+else {
+var upperCaseArray = ""
+alert("Your password will not contain uppercase letters.");
+};
+
+// numeric
+var confirmNumbers = window.confirm("Click OK to confirm including numeric characters."); 
+console.log(confirmNumbers);
+
+if (confirmNumbers) {
+var numbersArray = '';
+selectedCharacters += numbers;
+alert("Your password will contain numbers.");
+}
+else {
+var numbers = ""
+alert("Your password will not contain numbers.");
+};
+
+// special characters
+var confirmSpecialCharacters = window.confirm("Click OK to confirm including special characters."); 
+console.log(confirmSpecialCharacters);
+
+if (confirmSpecialCharacters) {
+var specialCharactersArray = '';
+selectedCharacters += characters;
+alert("Your password will contain special characters.");
+}
+else {
+var confirmSpecialCharacters = ""
+alert("Your password will not contain special characters.");
+};
+
 
 
 function writePassword() {
