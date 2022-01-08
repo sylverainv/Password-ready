@@ -90,12 +90,13 @@ var specialCharactersArray = [
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+
 // Prompts for password criteria
 var confirmLength = (prompt("How many characters would you like your password to contain?"));
 
 // If answer is outside the parameters 
   while(confirmLength  < 8 || confirmLength > 128) {
-    alert("Password length must be between 8-50 characters Try again");
+    alert("Password length must be between 8-128 characters Try again");
     var confirmLength = (prompt("How many characters would you like your password to contain?"));
     } 
 
@@ -103,11 +104,10 @@ var confirmLength = (prompt("How many characters would you like your password to
     alert(`Your password will have ${confirmLength} characters`);
     
 // Confirm whether or not to use lowercase, uppercase, numeric and/or special characters
+//lower case letters
 var confirmLowercase = window.confirm("Click OK to confirm including lowercase characters."); 
 console.log(confirmLowercase);
-
 var selectedCharacters = "";
-
 
 if (confirmLowercase) {
 var lowerCaseArray = '';
@@ -115,7 +115,7 @@ selectedCharacters += lowercase;
 alert("Your password will contain lowercase letters.");
 }
 else {
-var lowerCaseArray = ""
+var lowerCase = ""
 alert("Your password will not contain lowercase letters.");
 };
 
@@ -129,7 +129,7 @@ selectedCharacters += uppercase;
 alert("Your password will contain uppercase letters.");
 }
 else {
-var upperCaseArray = ""
+var upperCase = ""
 alert("Your password will not contain uppercase letters.");
 };
 
