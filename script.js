@@ -160,6 +160,12 @@ else {
 var confirmSpecialCharacters = ""
 alert("Your password will not contain special characters.");
 };
+ 
+// selection of random varibles
+for (i = 0; i < passLength; i++) {
+  password +=
+    userSelect[Math.floor(Math.random() * userSelect.length)];
+}
 
 
 
